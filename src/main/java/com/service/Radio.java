@@ -1,8 +1,23 @@
 package com.service;
+
 public class Radio {
     private int radioStationNumber;
     private int currentVolume;
-    private final int maxRadioStation = 10;
+    private int maxRadioStation;
+
+
+    {
+        maxRadioStation = 10;
+    }
+    public Radio(){
+
+    }
+
+    public Radio(int maxRadioStation) {
+        this.maxRadioStation = maxRadioStation;
+
+    }
+
     public int getVolume() {
         return currentVolume;
     }
@@ -32,7 +47,7 @@ public class Radio {
         }
     }
 
-    public void next(){
+    public void next() {
         setRadioStationNumber((radioStationNumber + 1) % maxRadioStation);
     }
 
