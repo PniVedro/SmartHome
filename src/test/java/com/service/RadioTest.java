@@ -1,5 +1,7 @@
 package com.service;
+
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -20,9 +22,9 @@ public class RadioTest {
 
     @ParameterizedTest
     @CsvSource({"1, 0",
-                "2, 1",
-                "100, 99",
-                "100, 100",
+            "2, 1",
+            "100, 99",
+            "100, 100",
     })
     public void increaseVolumeTest(int expected, int newCurrentVolume) {
         Radio radio = new Radio();
@@ -34,9 +36,9 @@ public class RadioTest {
 
     @ParameterizedTest
     @CsvSource({"0, 0",
-                "0, 1",
-                "99, 100",
-                "98, 99",
+            "0, 1",
+            "99, 100",
+            "98, 99",
     })
     public void decreaseVolumeTest(int expected, int newCurrentVolume) {
         Radio radio = new Radio();
@@ -48,10 +50,10 @@ public class RadioTest {
 
     @ParameterizedTest
     @CsvSource({"0, 0",
-                "1, 1",
-                "9, 9",
-                "0, 10",
-                "0, -1"
+            "1, 1",
+            "9, 9",
+            "0, 10",
+            "0, -1"
     })
     public void setRadioStationNumberTest(int expected, int newRadioStationNumber) {
         Radio radio = new Radio();
@@ -62,9 +64,9 @@ public class RadioTest {
 
     @ParameterizedTest
     @CsvSource({"1, 0",
-                "2, 1",
-                "0, 9",
-                "9, 8"
+            "2, 1",
+            "0, 9",
+            "9, 8"
     })
     public void nextTest(int expected, int newRadioStationNumber) {
         Radio radio = new Radio();
@@ -87,4 +89,7 @@ public class RadioTest {
         int actual = radio.getRadioStationNumber();
         Assertions.assertEquals(expected, actual);
     }
+
+
 }
+
