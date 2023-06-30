@@ -9,7 +9,8 @@ public class Radio {
     {
         maxRadioStation = 10;
     }
-    public Radio(){
+
+    public Radio() {
 
     }
 
